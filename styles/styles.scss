@@ -1,0 +1,456 @@
+$primary-color: #fee2b3;
+$secondary-color: #eaebec99;
+
+$primary-font_color: #364d59;
+$secondary-font_color: white;
+$expertise-font_color: black;
+$expertise_subfont_color: gray;
+
+$primary-font_family: "Roboto", sans-serif;
+$secondary-font_family: "Playfair Display", serif;
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  background-color: $primary-color;
+  position: relative;
+  padding-bottom: 2rem;
+
+  .logo {
+    font-family: $primary-font_family;
+    color: $expertise-font_color;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 3rem 1rem 2rem 1rem;
+    width: 50%;
+  }
+
+  .menu {
+    display: none;
+    /*
+    display: flex;
+    flex-direction: column;
+    */
+    background-color: #f8f9fa;
+    position: absolute;
+    height: 100vh;
+    padding: 2rem 1rem;
+    margin-left: 60%;
+    width: 40%;
+  }
+
+  .toggle {
+    list-style: none;
+    padding-top: 2rem;
+  }
+
+  .toggle li {
+    padding: 1rem 0rem;
+  }
+
+  li a {
+    color: #212529;
+    text-decoration: none;
+    font-family: $primary-font_family;
+    font-size: 20px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .practice {
+    display: none;
+  }
+}
+
+.introduction {
+  @include flex-column;
+  background-image: url("../images/hero_bg_1.jpg.webp");
+
+  .introduction-text {
+    padding-top: 4rem;
+    padding-left: 0.5rem;
+    width: 85%;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-family: $secondary-font_family;
+    color: $secondary-font_color;
+    padding-left: 1rem;
+  }
+
+  .lighter {
+    font-weight: normal;
+  }
+
+  .subtitle {
+    font-family: $primary-font_family;
+    color: $secondary-font_color;
+    padding-left: 1rem;
+    line-height: 1.6;
+  }
+
+  .form {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    font-family: $secondary-font_family;
+  }
+
+  .book-form {
+    background-color: white;
+    border-radius: 5px;
+    height: 420px;
+    width: 450px;
+  }
+
+  .form-requirements {
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+  }
+
+  .form-requirements p {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
+
+  .box {
+    padding-bottom: 1rem;
+  }
+
+  .form-things {
+    padding: 1.5rem;
+    width: 95%;
+    font-size: 1rem;
+    color: $primary-font_color;
+  }
+
+  .button {
+    background-color: $primary-color;
+    border: none;
+    color: $expertise-font_color;
+  }
+}
+
+.expertise-areas {
+  @include flex-column;
+  background-color: $secondary-color;
+  padding: 2rem;
+
+  .expertitle {
+    color: $primary-font_color;
+    font-size: 1rem;
+    font-family: $primary-font_family;
+    padding-bottom: 2rem;
+  }
+
+  .expertise-cards {
+    padding-bottom: 2rem 0;
+  }
+
+  .expertise-card {
+    padding: 3rem 2rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    box-shadow: 2px 2px 2px rgba(151, 149, 149, 0.1);
+  }
+
+  .expertise-card img {
+    width: 15%;
+  }
+
+  .expertise-title {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    color: $expertise-font_color;
+  }
+
+  .expertise-subtitle {
+    font-family: $primary-font_family;
+    color: $expertise_subfont_color;
+    font-size: 14px;
+    padding-top: 0.5rem;
+    line-height: 1.6;
+  }
+}
+
+.solutions {
+  display: flex;
+  flex-wrap: wrap;
+
+  .lawyer-images {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .lawyer-image img {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .reliable-solutions {
+    @include flex-column;
+    padding: 1rem 2rem 2rem 2rem;
+  }
+
+  .solutions-title {
+    color: $primary-font_color;
+    font-family: $secondary-font_family;
+    font-weight: normal;
+    font-size: 2rem;
+  }
+
+  .stronger {
+    font-weight: bold;
+  }
+
+  .solutions-subtitle {
+    font-family: $primary-font_family;
+    color: $primary-font_color;
+    padding-top: 1rem;
+    line-height: 1.6;
+  }
+
+  .button_back {
+    padding: 2rem;
+  }
+
+  .back-form {
+    text-decoration: none;
+    color: $expertise-font_color;
+    background-color: $primary-color;
+    font-family: $primary-font_family;
+    font-size: 1rem;
+    padding: 1rem;
+    border-radius: 5%;
+  }
+}
+
+.customers-area {
+  background-color: $secondary-color;
+  padding: 2rem;
+  @include flex-column;
+
+  .customers-title {
+    font-size: 2rem;
+    font-family: $secondary-font_family;
+    color: $primary-font_color;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .customer-card {
+    padding-bottom: 1.5rem;
+    background-color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: 1px 1.5px 1px rgba(151, 149, 149, 0.1);
+    border-radius: 5px;
+  }
+
+  .customer-image {
+    padding: 1.5rem;
+    display: flex;
+  }
+
+  .customer-image img {
+    width: 15%;
+    border-radius: 50%;
+  }
+
+  .name-post {
+    padding: 0.5rem;
+    width: 30%;
+  }
+
+  .customer-name {
+    color: $primary-font_color;
+    font-family: $primary-font_family;
+  }
+
+  .customer-post {
+    color: $expertise_subfont_color;
+    font-family: $primary-font_family ;
+  }
+
+  .customer-review {
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  .customer-feedback {
+    color: $primary-font_color;
+    font-family: $primary-font_family;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+.legal-solutions {
+  @include flex-column;
+  padding: 2rem 1.5rem;
+
+  .solution-image {
+    padding-bottom: 2rem;
+  }
+
+  .solution-image img {
+    width: 100%;
+  }
+
+  .solutions-title_legal {
+    color: $primary-font_color;
+    font-weight: normal;
+    font-family: $secondary-font_family;
+    font-size: 2rem;
+  }
+
+  .stronger-legal {
+    font-weight: bold;
+  }
+
+  .solutions-subtitle_legal {
+    font-family: $primary-font_family;
+    color: $primary-font_color;
+    padding-top: 1rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .list {
+    padding: 1.5rem;
+  }
+
+  .solutions-list {
+    list-style: none;
+    padding: 1rem;
+  }
+
+  .solutions-list li {
+    color: $primary-font_color;
+    font-family: $primary-font_family;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .accordion-container {
+    @include flex-column;
+    padding: 2rem 1.5rem 2rem 0rem;
+  }
+
+  .accordion-content {
+    background-color: $secondary-color;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+
+  .howto {
+    background-color: white;
+    border: 2px solid rgba(151, 149, 149, 0.1);
+    border-radius: 5px;
+  }
+
+  .howto-title {
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-family: $secondary-font_family;
+  }
+
+  .howto-description {
+    display: none;
+    /*
+    @include flex-column;
+    */
+  }
+
+  .howto-subtitle {
+    font-family: $primary-font_family;
+    font-size: 1rem;
+    color: $expertise_subfont_color;
+    padding: 1.1rem;
+    line-height: 1.5;
+  }
+}
+
+.about {
+  @include flex-column;
+  padding: 1.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.575), rgba(0, 0, 0, 0.575)), url(../images/hero_bg_1.jpg.webp);
+  background-size: cover;
+  color: white;
+
+
+  .about-us {
+    padding-top: 5rem;
+  }
+
+  .about-title {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    font-family: $secondary-font_family;
+  }
+
+  .about-description {
+    font-family: $primary-font_family;
+    color: white;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .social-media {
+    display: inline;
+  }
+
+  .social-media img {
+    width: 5%;
+    filter: invert(100%);
+    padding: 0.2rem;
+  }
+
+  .topics-container {
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid gray;
+  }
+
+  .topic {
+    list-style: none;
+    padding-bottom: 1rem;
+  }
+
+  .topic-title {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .topic li {
+    padding: 0.5rem 0;
+    font-family: $primary-font_family;
+    color: $expertise_subfont_color;
+  }
+.rights{
+  padding: 3rem 0;
+}
+.copy{
+  font-family: $primary-font_family;
+  text-align: center;
+}
+
+.Colorlib-footer{
+  text-decoration: none;
+  color: $expertise_subfont_color;
+}
+}

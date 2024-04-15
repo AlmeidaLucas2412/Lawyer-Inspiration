@@ -1,0 +1,381 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  background-color: #fee2b3;
+  position: relative;
+  padding-bottom: 2rem;
+}
+.navbar .logo {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 3rem 1rem 2rem 1rem;
+  width: 50%;
+}
+.navbar .menu {
+  display: none;
+  /*
+  display: flex;
+  flex-direction: column;
+  */
+  background-color: #f8f9fa;
+  position: absolute;
+  height: 100vh;
+  padding: 2rem 1rem;
+  margin-left: 60%;
+  width: 40%;
+}
+.navbar .toggle {
+  list-style: none;
+  padding-top: 2rem;
+}
+.navbar .toggle li {
+  padding: 1rem 0rem;
+}
+.navbar li a {
+  color: #212529;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.navbar li a:hover {
+  color: #fee2b3;
+}
+.navbar .practice {
+  display: none;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/hero_bg_1.jpg.webp");
+}
+.introduction .introduction-text {
+  padding-top: 4rem;
+  padding-left: 0.5rem;
+  width: 85%;
+}
+.introduction .title {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  color: white;
+  padding-left: 1rem;
+}
+.introduction .lighter {
+  font-weight: normal;
+}
+.introduction .subtitle {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+.introduction .form {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+}
+.introduction .book-form {
+  background-color: white;
+  border-radius: 5px;
+  height: 420px;
+  width: 450px;
+}
+.introduction .form-requirements {
+  padding: 1.5rem 1.5rem 1.5rem 2rem;
+}
+.introduction .form-requirements p {
+  font-size: 20px;
+  padding-bottom: 1.5rem;
+}
+.introduction .box {
+  padding-bottom: 1rem;
+}
+.introduction .form-things {
+  padding: 1.5rem;
+  width: 95%;
+  font-size: 1rem;
+  color: #364d59;
+}
+.introduction .button {
+  background-color: #fee2b3;
+  border: none;
+  color: black;
+}
+
+.expertise-areas {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(234, 235, 236, 0.6);
+  padding: 2rem;
+}
+.expertise-areas .expertitle {
+  color: #364d59;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  padding-bottom: 2rem;
+}
+.expertise-areas .expertise-cards {
+  padding-bottom: 2rem 0;
+}
+.expertise-areas .expertise-card {
+  padding: 3rem 2rem;
+  background-color: white;
+  margin-bottom: 2rem;
+  box-shadow: 2px 2px 2px rgba(151, 149, 149, 0.1);
+}
+.expertise-areas .expertise-card img {
+  width: 15%;
+}
+.expertise-areas .expertise-title {
+  font-size: 1.5rem;
+  padding-top: 0.5rem;
+  color: black;
+}
+.expertise-areas .expertise-subtitle {
+  font-family: "Roboto", sans-serif;
+  color: gray;
+  font-size: 14px;
+  padding-top: 0.5rem;
+  line-height: 1.6;
+}
+
+.solutions {
+  display: flex;
+  flex-wrap: wrap;
+}
+.solutions .lawyer-images {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+}
+.solutions .lawyer-image img {
+  width: 100%;
+  padding: 1rem;
+}
+.solutions .reliable-solutions {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 2rem 2rem;
+}
+.solutions .solutions-title {
+  color: #364d59;
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+  font-size: 2rem;
+}
+.solutions .stronger {
+  font-weight: bold;
+}
+.solutions .solutions-subtitle {
+  font-family: "Roboto", sans-serif;
+  color: #364d59;
+  padding-top: 1rem;
+  line-height: 1.6;
+}
+.solutions .button_back {
+  padding: 2rem;
+}
+.solutions .back-form {
+  text-decoration: none;
+  color: black;
+  background-color: #fee2b3;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 5%;
+}
+
+.customers-area {
+  background-color: rgba(234, 235, 236, 0.6);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.customers-area .customers-title {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  color: #364d59;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.customers-area .customer-card {
+  padding-bottom: 1.5rem;
+  background-color: white;
+  margin-bottom: 1.5rem;
+  box-shadow: 1px 1.5px 1px rgba(151, 149, 149, 0.1);
+  border-radius: 5px;
+}
+.customers-area .customer-image {
+  padding: 1.5rem;
+  display: flex;
+}
+.customers-area .customer-image img {
+  width: 15%;
+  border-radius: 50%;
+}
+.customers-area .name-post {
+  padding: 0.5rem;
+  width: 30%;
+}
+.customers-area .customer-name {
+  color: #364d59;
+  font-family: "Roboto", sans-serif;
+}
+.customers-area .customer-post {
+  color: gray;
+  font-family: "Roboto", sans-serif;
+}
+.customers-area .customer-review {
+  padding: 0rem 1.5rem 1.5rem 1.5rem;
+}
+.customers-area .customer-feedback {
+  color: #364d59;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.legal-solutions {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+.legal-solutions .solution-image {
+  padding-bottom: 2rem;
+}
+.legal-solutions .solution-image img {
+  width: 100%;
+}
+.legal-solutions .solutions-title_legal {
+  color: #364d59;
+  font-weight: normal;
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+}
+.legal-solutions .stronger-legal {
+  font-weight: bold;
+}
+.legal-solutions .solutions-subtitle_legal {
+  font-family: "Roboto", sans-serif;
+  color: #364d59;
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+.legal-solutions .list {
+  padding: 1.5rem;
+}
+.legal-solutions .solutions-list {
+  list-style: none;
+  padding: 1rem;
+}
+.legal-solutions .solutions-list li {
+  color: #364d59;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.legal-solutions .accordion-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem 2rem 0rem;
+}
+.legal-solutions .accordion-content {
+  background-color: rgba(234, 235, 236, 0.6);
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.legal-solutions .howto {
+  background-color: white;
+  border: 2px solid rgba(151, 149, 149, 0.1);
+  border-radius: 5px;
+}
+.legal-solutions .howto-title {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-family: "Playfair Display", serif;
+}
+.legal-solutions .howto-description {
+  display: none;
+  /*
+  @include flex-column;
+  */
+}
+.legal-solutions .howto-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: gray;
+  padding: 1.1rem;
+  line-height: 1.5;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.575), rgba(0, 0, 0, 0.575)), url(../images/hero_bg_1.jpg.webp);
+  background-size: cover;
+  color: white;
+}
+.about .about-us {
+  padding-top: 5rem;
+}
+.about .about-title {
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+.about .about-description {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  line-height: 1.5rem;
+  padding-bottom: 1rem;
+}
+.about .social-media {
+  display: inline;
+}
+.about .social-media img {
+  width: 5%;
+  filter: invert(100%);
+  padding: 0.2rem;
+}
+.about .topics-container {
+  padding-top: 1rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid gray;
+}
+.about .topic {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+.about .topic-title {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+.about .topic li {
+  padding: 0.5rem 0;
+  font-family: "Roboto", sans-serif;
+  color: gray;
+}
+.about .rights {
+  padding: 3rem 0;
+}
+.about .copy {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+.about .Colorlib-footer {
+  text-decoration: none;
+  color: gray;
+}/*# sourceMappingURL=styles.css.map */
