@@ -220,7 +220,7 @@
   }
 }
 .introduction .form-requirements {
-  padding: 1.5rem 0rem 1.5rem 2rem;
+  padding: 1.5rem;
 }
 .introduction .form-requirements p {
   font-size: 20px;
@@ -228,10 +228,11 @@
 }
 .introduction .box {
   padding-bottom: 1rem;
+  width: 100%;
 }
 .introduction .form-things {
   padding: 1.5rem;
-  width: 95%;
+  width: 100%;
   font-size: 1rem;
   color: #364d59;
 }
@@ -307,7 +308,12 @@
   }
 }
 .expertise-areas .expertise-card img {
-  width: 8%;
+  width: 15%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .expertise-areas .expertise-card img {
+    width: 10%;
+  }
 }
 @media (min-width: 1025px) {
   .expertise-areas .expertise-card img {

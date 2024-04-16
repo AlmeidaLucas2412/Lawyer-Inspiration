@@ -7,288 +7,290 @@
   <link rel="stylesheet" href="./styles/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <title>Notary</title>
+  <script type="text/javascript" src="./JS/file.js"></script>
+    <title>Notary</title>
 </head>
 
-<body>
-  <header>
-    <nav class="navbar">
-      <a class="logo" href="#">Notary</a>
-      <div class="svg-menu">
-      <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-        <g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round"/> <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round"/> <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round"/> </g>
-        </svg>
-      </div>
-      <div class="menu">
-        <div class="svg-close">
-          <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-            <g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#0F0F0F"/> </g>
-            </svg>
-          </div>
-        <ul class="toggle">
-          <li><a href="#">Home</a></li>
-          <li class="sub-menu"><a href="#">Practice Areas</a>
-            <ul class="practice">
-              <li>Bankruptcy Law</li>
-              <li>Business Law</li>
-              <li>Civil Rights Law</li>
-              <li>Criminal Law</li>
-              <li>Immigration Law</li>
-              <li>Family Law</li>
-            </ul>
-          </li>
-          <li><a href="#">Testimonials</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="introduction">
-      <div class="introduction-content">
-        <div class="introduction-text">
-          <h1 class="title">Notary Public<span class="lighter"> & Legal Solutions</span></h1>
-          <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis cupiditate deserunt placeat necessitatibus a aliquam corrupti nisi odio aliquid, acussamus.</p>
-        </div>
-        <div class="form">
-          <form class="book-form">
-            <div class="form-requirements">
-              <p>Book an Appointment</p>
-              <div class="box">
-                <input class="form-things" type="text" placeholder="Name">
+      <body>
+        <header>
+          <nav class="navbar">
+            <a class="logo" href="#">Notary</a>
+            <div class="svg-menu">
+              <svg class="svg-button" width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                <g id="SVGRepo_iconCarrier"> <path d="M4 18L20 18" stroke="#000000" stroke-width="2" stroke-linecap="round" /> <path d="M4 12L20 12" stroke="#000000" stroke-width="2" stroke-linecap="round" /> <path d="M4 6L20 6" stroke="#000000" stroke-width="2" stroke-linecap="round" /> </g>
+              </svg>
+            </div>
+            <div class="menu">
+              <div class="svg-close">
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+                  <g id="SVGRepo_iconCarrier"> <path d="M20.7457 3.32851C20.3552 2.93798 19.722 2.93798 19.3315 3.32851L12.0371 10.6229L4.74275 3.32851C4.35223 2.93798 3.71906 2.93798 3.32854 3.32851C2.93801 3.71903 2.93801 4.3522 3.32854 4.74272L10.6229 12.0371L3.32856 19.3314C2.93803 19.722 2.93803 20.3551 3.32856 20.7457C3.71908 21.1362 4.35225 21.1362 4.74277 20.7457L12.0371 13.4513L19.3315 20.7457C19.722 21.1362 20.3552 21.1362 20.7457 20.7457C21.1362 20.3551 21.1362 19.722 20.7457 19.3315L13.4513 12.0371L20.7457 4.74272C21.1362 4.3522 21.1362 3.71903 20.7457 3.32851Z" fill="#0F0F0F" /> </g>
+                </svg>
               </div>
-              <div class="box">
-                <input class="form-things" type="email" placeholder="Email">
+              <ul class="toggle">
+                <li><a href="#">Home</a></li>
+                <li class="sub-menu"><a href="#">Practice Areas</a>
+                  <ul class="practice">
+                    <li>Bankruptcy Law</li>
+                    <li>Business Law</li>
+                    <li>Civil Rights Law</li>
+                    <li>Criminal Law</li>
+                    <li>Immigration Law</li>
+                    <li>Family Law</li>
+                  </ul>
+                </li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <main>
+          <section class="introduction">
+            <div class="introduction-content">
+              <div class="introduction-text">
+                <h1 class="title">Notary Public<span class="lighter"> & Legal Solutions</span></h1>
+                <p class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis cupiditate deserunt placeat necessitatibus a aliquam corrupti nisi odio aliquid, acussamus.</p>
               </div>
-              <div class="box">
-                <input class="form-things" type="date" placeholder="Select Date">
-              </div>
-              <div class="box">
-                <input class="form-things button" type="submit" value="Book Appointment">
+              <div class="form">
+                <form class="book-form">
+                  <div class="form-requirements">
+                    <p>Book an Appointment</p>
+                    <div class="box">
+                      <input class="form-things" type="text" placeholder="Name">
+                    </div>
+                    <div class="box">
+                      <input class="form-things" type="email" placeholder="Email">
+                    </div>
+                    <div class="box">
+                      <input class="form-things" type="date" placeholder="Select Date">
+                    </div>
+                    <div class="box">
+                      <input class="form-things button" type="submit" value="Book Appointment">
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-          </form>
-        </div>
-      </div>
-    </section>
-    <section class="expertise-areas">
-      <h2 class="practice-areas">Practice<span class="practice-span"> Areas</span></h2>
-      <p class="expertitle"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <div class="expertise-cards">
-        <div class="expertise-card">
-          <div class="card-image">
-            <img src="./images/bank.svg" alt="Bank">
-          </div>
-          <h3 class="expertise-title">Bankruptcy Law</h3>
-          <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-image">
-            <img src="./images/business.svg" alt="Business">
-          </div>
-          <h3 class="expertise-title">Business Law</h3>
-          <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-image">
-            <img src="./images/civil.svg" alt="Civil Rights">
-          </div>
-          <h3 class="expertise-title">Civil Rights Law</h3>
-          <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-image">
-            <img src="./images/criminal.svg" alt="criminal">
-          </div>
-          <h3 class="expertise-title">Criminal Law</h3>
-          <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-image">
-            <img src="./images/immigration.svg" alt="Immigration">
-          </div>
-          <h3 class="expertise-title">Immigration Law</h3>
-          <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
-        </div>
-        <div class="expertise-card">
-          <div class="card-image">
-            <img src="./images/family.svg" alt="Family">
-          </div>
-          <h3 class="expertise-title">Family Law</h3>
-          <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
-        </div>
-      </div>
-    </section>
-    <section class="solutions">
-      <div class="lawyer-images">
-        <div class="lawyer-image">
-          <img src="./images/atty_1.jpg.webp" alt="Woman">
-        </div>
-        <div class="lawyer-image">
-          <img src="./images/atty_2.jpg.webp" alt="Man">
-        </div>
-      </div>
-      <div class="desktop-model">
-        <div class="reliable-solutions">
-          <h2 class="solutions-title">We Provide Highly <span class="stronger">Reliable & Effective</span> Legal Solutions</h2>
-          <p class="solutions-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, explicabo iste a labore id est quas, doloremque veriatis! Provident odit pariatur dolorem quaisquam, voluptatibus voluptates optio accusamus, vel quasi quidem!</p>
-        </div>
-        <div class="button_back">
-          <a class="back-form" href="#">Book an appointment</a>
-        </div>
-      </div>
-    </section>
-    <article class="customers-area">
-      <h2 class="customers-title">Happy Customers</h2>
-      <div class="customers-cards">
-        <div class="customer-card">
-          <div class="customer-image">
-            <img src="./images/customer_1.webp" alt="Lina Gold">
-            <div class="name-post">
-              <span class="customer-name">Lina Gold</span>
-              <span class="customer-post">Owner, Ford</span>
+          </section>
+          <section class="expertise-areas">
+            <h2 class="practice-areas">Practice<span class="practice-span"> Areas</span></h2>
+            <p class="expertitle"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="expertise-cards">
+              <div class="expertise-card">
+                <div class="card-image">
+                  <img src="./images/bank.svg" alt="Bank">
+                </div>
+                <h3 class="expertise-title">Bankruptcy Law</h3>
+                <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
+              </div>
+              <div class="expertise-card">
+                <div class="card-image">
+                  <img src="./images/business.svg" alt="Business">
+                </div>
+                <h3 class="expertise-title">Business Law</h3>
+                <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
+              </div>
+              <div class="expertise-card">
+                <div class="card-image">
+                  <img src="./images/civil.svg" alt="Civil Rights">
+                </div>
+                <h3 class="expertise-title">Civil Rights Law</h3>
+                <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
+              </div>
+              <div class="expertise-card">
+                <div class="card-image">
+                  <img src="./images/criminal.svg" alt="criminal">
+                </div>
+                <h3 class="expertise-title">Criminal Law</h3>
+                <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
+              </div>
+              <div class="expertise-card">
+                <div class="card-image">
+                  <img src="./images/immigration.svg" alt="Immigration">
+                </div>
+                <h3 class="expertise-title">Immigration Law</h3>
+                <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
+              </div>
+              <div class="expertise-card">
+                <div class="card-image">
+                  <img src="./images/family.svg" alt="Family">
+                </div>
+                <h3 class="expertise-title">Family Law</h3>
+                <p class="expertise-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, laboriosam!</p>
+              </div>
+            </div>
+          </section>
+          <section class="solutions">
+            <div class="lawyer-images">
+              <div class="lawyer-image">
+                <img src="./images/atty_1.jpg.webp" alt="Woman">
+              </div>
+              <div class="lawyer-image">
+                <img src="./images/atty_2.jpg.webp" alt="Man">
+              </div>
+            </div>
+            <div class="desktop-model">
+              <div class="reliable-solutions">
+                <h2 class="solutions-title">We Provide Highly <span class="stronger">Reliable & Effective</span> Legal Solutions</h2>
+                <p class="solutions-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae, explicabo iste a labore id est quas, doloremque veriatis! Provident odit pariatur dolorem quaisquam, voluptatibus voluptates optio accusamus, vel quasi quidem!</p>
+              </div>
+              <div class="button_back">
+                <a class="back-form" href="#">Book an appointment</a>
+              </div>
+            </div>
+          </section>
+          <article class="customers-area">
+            <h2 class="customers-title">Happy Customers</h2>
+            <div class="customers-cards">
+              <div class="customer-card">
+                <div class="customer-image">
+                  <img src="./images/customer_1.webp" alt="Lina Gold">
+                    <div class="name-post">
+                      <span class="customer-name">Lina Gold</span>
+                      <span class="customer-post">Owner, Ford</span>
+                    </div>
+                </div>
+                <div class="customer-review">
+                  <p class="customer-feedback">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+              </div>
+              <div class="customer-card">
+                <div class="customer-image">
+                  <img src="./images/customer_2.webp" alt="Mike Fisher">
+                    <div class="name-post">
+                      <span class="customer-name">Mike Fisher</span>
+                      <span class="customer-post">Owner, Ford</span>
+                    </div>
+                </div>
+                <div class="customer-review">
+                  <p class="customer-feedback">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+              </div>
+              <div class="customer-card">
+                <div class="customer-image">
+                  <img src="./images/customer_3.webp" alt="Sheen Yu">
+                    <div class="name-post">
+                      <span class="customer-name">Sheen Yu</span>
+                      <span class="customer-post">Owner, Ford</span>
+                    </div>
+                </div>
+                <div class="customer-review">
+                  <p class="customer-feedback">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <section class="legal-solutions">
+            <div class="legal-content">
+              <div class="solution-image">
+                <img src="./images/atty_2.jpg.webp" alt="man">
+              </div>
+              <div class="solutions-content">
+                <h2 class="solutions-title_legal">We have<span class="stronger-legal"></span> Legal Solutions</h2>
+                <p class="solutions-subtitle_legal">Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Quaisquam reprehenderit perspiciatis iste culpa consequuntur consequatur eum, voluptatum, quod deserunt maiores?</p>
+                <p class="solutions-subtitle_legal">Modi perferendis ipsa ducimus consequuntur excepturi autem, numquam facere aperiam iste nam molestias provident consectetur molestiae voluptatibus ipsum. Fugiat, quas.</p>
+                <div class="list">
+                  <ul class="solutions-list">
+                    <li>Aperiam iste nam molestias</li>
+                    <li>Modi perferendis ipsa</li>
+                    <li>Perspic iste culpa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-container">
+              <div class="accordion-content">
+                <div class="howto">
+                  <p class="howto-title">How to download and register?</p>
+                </div>
+                <div class="howto-description">
+                  <p class="howto-subtitle">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. </p>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <div class="howto">
+                  <p class="howto-title">How to create your paypal account?</p>
+                </div>
+                <div class="howto-description">
+                  <p class="howto-subtitle">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. </p>
+                </div>
+              </div>
+              <div class="accordion-content">
+                <div class="howto">
+                  <p class="howto-title">How to link your paypal and bank account?</p>
+                </div>
+                <div class="howto-description">
+                  <p class="howto-subtitle">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="customer-review">
-            <p class="customer-feedback">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
-          </div>
-        </div>
-        <div class="customer-card">
-          <div class="customer-image">
-            <img src="./images/customer_2.webp" alt="Mike Fisher">
-            <div class="name-post">
-              <span class="customer-name">Mike Fisher</span>
-              <span class="customer-post">Owner, Ford</span>
+        </section>
+        <footer class="about">
+          <section class="footer-nav">
+            <div class="about-us">
+              <p class="about-title">About us</p>
+              <p class="about-description">Far far away behind the word mountains, far from the countries Vokali and Consonantia, there live the blind texts.</p>
+              <div class="social-media">
+                <a href="#"><img src="./images/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="./images/instagram.svg" alt="instagram"></a>
+                <a href="#"><img src="./images/twitter.svg" alt="twitter"></a>
+                <a href="#"><img src="./images/linkedin.svg" alt="Linkedin"></a>
+              </div>
             </div>
-          </div>
-          <div class="customer-review">
-            <p class="customer-feedback">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
-          </div>
-        </div>
-        <div class="customer-card">
-          <div class="customer-image">
-            <img src="./images/customer_3.webp" alt="Sheen Yu">
-            <div class="name-post">
-              <span class="customer-name">Sheen Yu</span>
-              <span class="customer-post">Owner, Ford</span>
+            <div class="topics-container">
+              <div class="topics">
+                <ul class="topic">
+                  <p class="topic-title">Quick Links</p>
+                  <li>About us</li>
+                  <li>Testimonials</li>
+                  <li>Terms of Service</li>
+                  <li>Privacy</li>
+                  <li>Contact us</li>
+                </ul>
+              </div>
+              <div class="topics">
+                <ul class="topic">
+                  <p class="topic-title">Resources</p>
+                  <li>About us</li>
+                  <li>Testimonials</li>
+                  <li>Terms of Service</li>
+                  <li>Privacy</li>
+                  <li>Contact us</li>
+                </ul>
+              </div>
+              <div class="topics">
+                <ul class="topic">
+                  <p class="topic-title">Support</p>
+                  <li>About us</li>
+                  <li>Testimonials</li>
+                  <li>Terms of Service</li>
+                  <li>Privacy</li>
+                  <li>Contact us</li>
+                </ul>
+              </div>
+              <div class="topics">
+                <ul class="topic">
+                  <p class="topic-title">Company</p>
+                  <li>About us</li>
+                  <li>Testimonials</li>
+                  <li>Terms of Service</li>
+                  <li>Privacy</li>
+                  <li>Contact us</li>
+                </ul>
+              </div>
             </div>
+          </section>
+          <div class="rights">
+            <p class="copy">Copyright₢2024 All rights reserved | This template is made with ♥ by <a class="Colorlib-footer" href="#">Colorib</a></p>
           </div>
-          <div class="customer-review">
-            <p class="customer-feedback">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, deserunt eveniet veniam. Ipsam, nam, voluptatum"</p>
-          </div>
-        </div>
-      </div>
-    </article>
-    <section class="legal-solutions">
-      <div class="legal-content">
-        <div class="solution-image">
-          <img src="./images/atty_2.jpg.webp" alt="man">
-        </div>
-        <div class="solutions-content">
-          <h2 class="solutions-title_legal">We have<span class="stronger-legal"></span> Legal Solutions</h2>
-          <p class="solutions-subtitle_legal">Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Quaisquam reprehenderit perspiciatis iste culpa consequuntur consequatur eum, voluptatum, quod deserunt maiores?</p>
-          <p class="solutions-subtitle_legal">Modi perferendis ipsa ducimus consequuntur excepturi autem, numquam facere aperiam iste nam molestias provident consectetur molestiae voluptatibus ipsum. Fugiat, quas.</p>
-          <div class="list">
-            <ul class="solutions-list">
-              <li>Aperiam iste nam molestias</li>
-              <li>Modi perferendis ipsa</li>
-              <li>Perspic iste culpa</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-container">
-        <div class="accordion-content">
-          <div class="howto">
-            <p class="howto-title">How to download and register?</p>
-          </div>
-          <div class="howto-description">
-            <p class="howto-subtitle">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. </p>
-          </div>
-        </div>
-        <div class="accordion-content">
-          <div class="howto">
-            <p class="howto-title">How to create your paypal account?</p>
-          </div>
-          <div class="howto-description">
-            <p class="howto-subtitle">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. </p>
-          </div>
-        </div>
-        <div class="accordion-content">
-          <div class="howto">
-            <p class="howto-title">How to link your paypal and bank account?</p>
-          </div>
-          <div class="howto-description">
-            <p class="howto-subtitle">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. </p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-    <footer class="about">
-      <section class="footer-nav">
-        <div class="about-us">
-          <p class="about-title">About us</p>
-          <p class="about-description">Far far away behind the word mountains, far from the countries Vokali and Consonantia, there live the blind texts.</p>
-          <div class="social-media">
-            <a href="#"><img src="./images/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="./images/instagram.svg" alt="instagram"></a>
-            <a href="#"><img src="./images/twitter.svg" alt="twitter"></a>
-            <a href="#"><img src="./images/linkedin.svg" alt="Linkedin"></a>
-          </div>
-        </div>
-        <div class="topics-container">
-          <div class="topics">
-            <ul class="topic">
-              <p class="topic-title">Quick Links</p>
-              <li>About us</li>
-              <li>Testimonials</li>
-              <li>Terms of Service</li>
-              <li>Privacy</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-          <div class="topics">
-            <ul class="topic">
-              <p class="topic-title">Resources</p>
-              <li>About us</li>
-              <li>Testimonials</li>
-              <li>Terms of Service</li>
-              <li>Privacy</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-          <div class="topics">
-            <ul class="topic">
-              <p class="topic-title">Support</p>
-              <li>About us</li>
-              <li>Testimonials</li>
-              <li>Terms of Service</li>
-              <li>Privacy</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-          <div class="topics">
-            <ul class="topic">
-              <p class="topic-title">Company</p>
-              <li>About us</li>
-              <li>Testimonials</li>
-              <li>Terms of Service</li>
-              <li>Privacy</li>
-              <li>Contact us</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <div class="rights">
-        <p class="copy">Copyright₢2024 All rights reserved | This template is made with ♥ by <a class="Colorlib-footer" href="#">Colorib</a></p>
-      </div>
-    </footer>
-  </main>
+        </footer>
+      </main>
+    </body>
 
-</html>
+</html >

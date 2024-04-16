@@ -238,7 +238,7 @@ $secondary-font_family: "Playfair Display", serif;
   }
 
   .form-requirements {
-    padding: 1.5rem 0rem 1.5rem 2rem;
+    padding: 1.5rem;
   }
 
   .form-requirements p {
@@ -248,11 +248,12 @@ $secondary-font_family: "Playfair Display", serif;
 
   .box {
     padding-bottom: 1rem;
+    width: 100%;
   }
 
   .form-things {
     padding: 1.5rem;
-    width: 95%;
+    width: 100%;
     font-size: 1rem;
     color: $primary-font_color;
   }
@@ -330,7 +331,11 @@ $secondary-font_family: "Playfair Display", serif;
   }
 
   .expertise-card img {
-    width: 8%;
+    width: 15%;
+
+    @media (min-width: 768px) and (max-width: 1024px){
+      width: 10%;
+    }
 
     @media (min-width: 1025px) {
       width: 20%;
