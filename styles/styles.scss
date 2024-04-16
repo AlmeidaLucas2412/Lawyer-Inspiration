@@ -1,5 +1,6 @@
-$primary-color: #fee2b3;
-$secondary-color: #eaebec99;
+$primary-bg-color: #fee2b3;
+$secondary-bg-color: #eaebec99;
+$tertiary-bg-color: #f9f9f9;
 
 $primary-font_color: #364d59;
 $secondary-font_color: white;
@@ -22,13 +23,14 @@ $secondary-font_family: "Playfair Display", serif;
 
 .navbar {
   display: flex;
-  background-color: $primary-color;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $primary-bg-color;
   position: relative;
-  padding-bottom: 2rem;
+  padding: 2rem;
 
   @media(min-width:1025px) {
     position: unset;
-    padding-bottom: 0;
   }
 
   .logo {
@@ -37,57 +39,68 @@ $secondary-font_family: "Playfair Display", serif;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.5rem;
-    padding: 3rem 1rem 2rem 1.5rem;
-    width: 50%;
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-      padding: 3rem 1rem 1rem 2rem;
-    }
-
-    @media (min-width: 1025px) {
-      width: 20%;
-      padding-left: 13rem;
-      padding-top: 2.5rem;
-    }
   }
 
   .svg-menu {
-    height: 100%;
-    padding-top: 3.5rem;
-    padding-left: 12rem;
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-      padding-left: 19rem;
-    }
+    z-index: 5;
+    background-color: transparent;
+    border: none;
 
     @media (min-width: 1025px) {
       display: none;
     }
+
+    .svg-menu-icon--close {
+      display: none;
+    }
+
+    &.open {
+      position: fixed;
+      right: 2rem;
+      .svg-menu-icon--close {
+        display: block;
+      }
+
+      .svg-menu-icon--open {
+        display: none;
+      }
+    }
+
+
   }
 
+
+
   .menu {
-    display: none;
     /*
     display: flex;
     flex-direction: column;
     */
-    background-color: #f8f9fa;
+    background-color: $tertiary-bg-color;
     position: fixed;
     height: 100dvh;
-    padding: 2rem 1rem;
-    margin-left: 60%;
+    right: 0;
+    top: 0;
     width: 40%;
+    min-width: 320px;
+    padding: 2rem;
+
+    @media (max-width: 1024px) {
+      &.sm-invisible {
+        transform: translateX(0);
+      }
+
+      transform: translateX(100%);
+      transition: 1s;
+    }
 
     @media (min-width: 1025px) {
       display: flex;
-      justify-content: flex-end;
       position: unset;
       background-color: unset;
-      padding: 0;
-      padding-top: 1rem;
       height: 100%;
-      margin-left: 0;
-      width: 70%;
+      width: auto;
+      padding: unset;
     }
   }
 
@@ -108,22 +121,27 @@ $secondary-font_family: "Playfair Display", serif;
       display: flex;
       gap: 1rem;
       position: relative;
+      padding-top: 0;
     }
   }
 
   .toggle li {
     padding: 1rem 0rem;
+
+    @media (min-width: 1025px) {
+      padding: 0;
+    }
   }
 
   li a {
-    color: #212529;
+    color: $expertise-font_color;
     text-decoration: none;
     font-family: $primary-font_family;
     font-size: 20px;
     transition: 0.3s;
 
     &:hover {
-      color: $primary-color;
+      color: $primary-bg-color;
     }
 
     @media(min-width: 1025px) {
@@ -259,7 +277,7 @@ $secondary-font_family: "Playfair Display", serif;
   }
 
   .button {
-    background-color: $primary-color;
+    background-color: $primary-bg-color;
     border: none;
     color: $expertise-font_color;
     cursor: pointer;
@@ -268,7 +286,7 @@ $secondary-font_family: "Playfair Display", serif;
 
 .expertise-areas {
   @include flex-column;
-  background-color: $secondary-color;
+  background-color: $secondary-bg-color;
   padding: 2rem;
 
   .practice-areas {
@@ -333,7 +351,7 @@ $secondary-font_family: "Playfair Display", serif;
   .expertise-card img {
     width: 15%;
 
-    @media (min-width: 768px) and (max-width: 1024px){
+    @media (min-width: 768px) and (max-width: 1024px) {
       width: 10%;
     }
 
@@ -422,7 +440,7 @@ $secondary-font_family: "Playfair Display", serif;
   .button_back {
     padding: 2rem;
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       padding: 1.5rem;
     }
   }
@@ -430,7 +448,7 @@ $secondary-font_family: "Playfair Display", serif;
   .back-form {
     text-decoration: none;
     color: $expertise-font_color;
-    background-color: $primary-color;
+    background-color: $primary-bg-color;
     font-family: $primary-font_family;
     font-size: 1rem;
     padding: 1rem;
@@ -439,7 +457,7 @@ $secondary-font_family: "Playfair Display", serif;
 }
 
 .customers-area {
-  background-color: $secondary-color;
+  background-color: $secondary-bg-color;
   padding: 2rem;
   @include flex-column;
 
@@ -518,7 +536,7 @@ $secondary-font_family: "Playfair Display", serif;
       width: 40%;
     }
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       width: 35%;
     }
   }
@@ -650,7 +668,7 @@ $secondary-font_family: "Playfair Display", serif;
   }
 
   .accordion-content {
-    background-color: $secondary-color;
+    background-color: $secondary-bg-color;
     margin-bottom: 1rem;
     border-radius: 5px;
     cursor: pointer;
@@ -739,7 +757,7 @@ $secondary-font_family: "Playfair Display", serif;
 
   .social-media a {
     width: 8%;
-    background-color: $primary-color;
+    background-color: $primary-bg-color;
     border-radius: 50%;
 
     @media (min-width: 768px) {

@@ -6,14 +6,15 @@
 
 .navbar {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #fee2b3;
   position: relative;
-  padding-bottom: 2rem;
+  padding: 2rem;
 }
 @media (min-width: 1025px) {
   .navbar {
     position: unset;
-    padding-bottom: 0;
   }
 }
 .navbar .logo {
@@ -22,60 +23,61 @@
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
-  padding: 3rem 1rem 2rem 1.5rem;
-  width: 50%;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .navbar .logo {
-    padding: 3rem 1rem 1rem 2rem;
-  }
-}
-@media (min-width: 1025px) {
-  .navbar .logo {
-    width: 20%;
-    padding-left: 13rem;
-    padding-top: 2.5rem;
-  }
 }
 .navbar .svg-menu {
-  height: 100%;
-  padding-top: 3.5rem;
-  padding-left: 12rem;
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  .navbar .svg-menu {
-    padding-left: 19rem;
-  }
+  z-index: 5;
+  background-color: transparent;
+  border: none;
 }
 @media (min-width: 1025px) {
   .navbar .svg-menu {
     display: none;
   }
 }
-.navbar .menu {
+.navbar .svg-menu .svg-menu-icon--close {
   display: none;
+}
+.navbar .svg-menu.open {
+  position: fixed;
+  right: 2rem;
+}
+.navbar .svg-menu.open .svg-menu-icon--close {
+  display: block;
+}
+.navbar .svg-menu.open .svg-menu-icon--open {
+  display: none;
+}
+.navbar .menu {
   /*
   display: flex;
   flex-direction: column;
   */
-  background-color: #f8f9fa;
+  background-color: #f9f9f9;
   position: fixed;
   height: 100dvh;
-  padding: 2rem 1rem;
-  margin-left: 60%;
+  right: 0;
+  top: 0;
   width: 40%;
+  min-width: 320px;
+  padding: 2rem;
+}
+@media (max-width: 1024px) {
+  .navbar .menu {
+    transform: translateX(100%);
+    transition: 1s;
+  }
+  .navbar .menu.sm-invisible {
+    transform: translateX(0);
+  }
 }
 @media (min-width: 1025px) {
   .navbar .menu {
     display: flex;
-    justify-content: flex-end;
     position: unset;
     background-color: unset;
-    padding: 0;
-    padding-top: 1rem;
     height: 100%;
-    margin-left: 0;
-    width: 70%;
+    width: auto;
+    padding: unset;
   }
 }
 .navbar .svg-close {
@@ -96,13 +98,19 @@
     display: flex;
     gap: 1rem;
     position: relative;
+    padding-top: 0;
   }
 }
 .navbar .toggle li {
   padding: 1rem 0rem;
 }
+@media (min-width: 1025px) {
+  .navbar .toggle li {
+    padding: 0;
+  }
+}
 .navbar li a {
-  color: #212529;
+  color: black;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
