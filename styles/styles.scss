@@ -51,6 +51,20 @@ $secondary-font_family: "Playfair Display", serif;
     }
   }
 
+  .svg-menu {
+    height: 100%;
+    padding-top: 3.5rem;
+    padding-left: 12rem;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      padding-left: 20rem;
+    }
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+  }
+
   .menu {
     display: none;
     /*
@@ -58,8 +72,8 @@ $secondary-font_family: "Playfair Display", serif;
     flex-direction: column;
     */
     background-color: #f8f9fa;
-    position: absolute;
-    height: 100vh;
+    position: fixed;
+    height: 100dvh;
     padding: 2rem 1rem;
     margin-left: 60%;
     width: 40%;
@@ -70,15 +84,25 @@ $secondary-font_family: "Playfair Display", serif;
       position: unset;
       background-color: unset;
       padding: 0;
+      padding-top: 1rem;
       height: 100%;
       margin-left: 0;
       width: 70%;
     }
   }
 
+  .svg-close {
+    display: flex;
+    justify-content: end;
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+  }
+
   .toggle {
     list-style: none;
-    padding-top: 2rem;
+    padding-top: 1rem;
 
     @media (min-width: 1025px) {
       display: flex;
@@ -112,19 +136,31 @@ $secondary-font_family: "Playfair Display", serif;
     }
   }
 
+  .sub-menu {
+    @media (min-width: 1025px) {
+      position: relative;
+    }
+  }
+
   .practice {
     display: none;
 
     @media (min-width: 1025px) {
-      /*
-      display: flex;
-      flex-direction: column;
-      background-color: white;
-      padding: 1rem;
+      @include flex-column;
       list-style: none;
+      font-size: 0.8rem;
       font-family: $primary-font_family;
-      */
+      background-color: white;
+      position: absolute;
+      margin-top: 20px;
+      width: 10rem;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+      display: none;
     }
+  }
+
+  .practice li {
+    padding: 0.5rem 1.5rem 1rem 1rem;
   }
 }
 
@@ -225,6 +261,7 @@ $secondary-font_family: "Playfair Display", serif;
     background-color: $primary-color;
     border: none;
     color: $expertise-font_color;
+    cursor: pointer;
   }
 }
 
@@ -262,7 +299,7 @@ $secondary-font_family: "Playfair Display", serif;
     font-family: $primary-font_family;
     padding-bottom: 2rem;
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
       text-align: center;
       padding-top: 0.5rem;
     }
@@ -271,7 +308,7 @@ $secondary-font_family: "Playfair Display", serif;
   .expertise-cards {
     padding-bottom: 2rem;
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
@@ -286,7 +323,7 @@ $secondary-font_family: "Playfair Display", serif;
     margin-bottom: 2rem;
     box-shadow: 2px 2px 2px rgba(151, 149, 149, 0.1);
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       padding: 3rem 3rem;
       width: 30%;
     }
@@ -295,7 +332,7 @@ $secondary-font_family: "Playfair Display", serif;
   .expertise-card img {
     width: 8%;
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       width: 20%;
     }
   }
@@ -319,11 +356,11 @@ $secondary-font_family: "Playfair Display", serif;
   display: flex;
   flex-wrap: wrap;
 
-  @media(min-width: 1025px){
+  @media(min-width: 1025px) {
     display: flex;
     flex-wrap: nowrap;
     padding: 5rem 1rem 5rem 11rem;
-  } 
+  }
 
   .lawyer-images {
     display: flex;
@@ -336,8 +373,8 @@ $secondary-font_family: "Playfair Display", serif;
     padding: 1rem;
   }
 
-  .desktop-model{
-    @media (min-width: 1025px){
+  .desktop-model {
+    @media (min-width: 1025px) {
       width: 90%;
     }
   }
@@ -346,8 +383,8 @@ $secondary-font_family: "Playfair Display", serif;
     @include flex-column;
     padding: 1rem 2rem 2rem 2rem;
 
-    @media (min-width: 1025px){
-      padding: 2.5rem;
+    @media (min-width: 1025px) {
+      padding: 1.5rem;
     }
   }
 
@@ -356,7 +393,7 @@ $secondary-font_family: "Playfair Display", serif;
     font-family: $secondary-font_family;
     font-weight: normal;
     font-size: 2rem;
-    
+
     @media (min-width: 1025px) {
       width: 60%;
     }
@@ -372,13 +409,17 @@ $secondary-font_family: "Playfair Display", serif;
     padding-top: 1rem;
     line-height: 1.6;
 
-    @media (min-width: 1024px){
+    @media (min-width: 1025px) {
       width: 60%;
     }
   }
 
   .button_back {
     padding: 2rem;
+
+    @media (min-width: 1025px){
+      padding: 1.5rem;
+    }
   }
 
   .back-form {
@@ -397,11 +438,11 @@ $secondary-font_family: "Playfair Display", serif;
   padding: 2rem;
   @include flex-column;
 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 768px) {
     padding: 5rem 2rem;
   }
 
-  @media (min-width: 1025px){
+  @media (min-width: 1025px) {
     padding: 2rem 4rem 7rem 4rem;
   }
 
@@ -415,14 +456,14 @@ $secondary-font_family: "Playfair Display", serif;
   }
 
   .customers-cards {
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
     }
 
-    @media (min-width:1024px){
-      display: flex;
+    @media (min-width:1024px) {
+      flex-wrap: nowrap;
       gap: 1rem;
       padding: 2rem 8rem;
     }
@@ -447,17 +488,19 @@ $secondary-font_family: "Playfair Display", serif;
     display: flex;
     padding-left: 1rem;
 
-    @media (min-width:1025px){
+    @media (min-width:1025px) {
       padding: 1rem;
     }
   }
 
   .customer-image img {
-    width: 17%;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     padding: 0.5rem;
+    min-width: 50px;
 
-    @media (min-width: 768px){
+    @media (min-width: 768px) {
       width: 20%;
     }
   }
@@ -468,6 +511,10 @@ $secondary-font_family: "Playfair Display", serif;
 
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 40%;
+    }
+
+    @media (min-width: 1025px){
+      width: 35%;
     }
   }
 
@@ -501,22 +548,24 @@ $secondary-font_family: "Playfair Display", serif;
     padding: 4rem 1.5rem;
   }
 
-  @media (min-width: 1025px){
+  @media (min-width: 1025px) {
     display: flex;
+    flex-direction: row;
   }
+
 
   .legal-content {
     @media (min-width: 768px) and (max-width: 1024px) {
       display: flex;
       gap: 1.5rem;
-      
+
     }
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       display: flex;
-      position: relative;
       padding: 3rem;
       padding-left: 8rem;
+      width: 70%;
     }
   }
 
@@ -526,9 +575,9 @@ $secondary-font_family: "Playfair Display", serif;
     @media (min-width: 768px) and (max-width: 1024px) {
       width: 45%;
     }
-    
-    @media (min-width: 1025px){
-      width: 30%;
+
+    @media (min-width: 1025px) {
+      width: 40%;
       padding: 1rem;
     }
   }
@@ -543,9 +592,10 @@ $secondary-font_family: "Playfair Display", serif;
       width: 50%;
     }
 
-    @media (min-width: 1025px){
-      width: 30%;
+    @media (min-width: 1025px) {
+      width: 50%;
       padding-left: 1rem;
+      padding-top: 1rem;
     }
   }
 
@@ -588,10 +638,9 @@ $secondary-font_family: "Playfair Display", serif;
     @include flex-column;
     padding: 2rem 1.5rem 2rem 0rem;
 
-    @media (min-width: 1025px){
-      position: absolute;
-      padding-left: 60rem;
-      padding-top: 3rem;
+    @media (min-width: 1025px) {
+      padding: 4rem 1.5rem 2rem 0rem;
+      width: 30%;
     }
   }
 
@@ -610,7 +659,7 @@ $secondary-font_family: "Playfair Display", serif;
 
   .howto-title {
     padding: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: $secondary-font_family;
   }
 
@@ -628,7 +677,9 @@ $secondary-font_family: "Playfair Display", serif;
     padding: 1.1rem;
     line-height: 1.5;
   }
+
 }
+
 
 .about {
   @include flex-column;
@@ -637,12 +688,12 @@ $secondary-font_family: "Playfair Display", serif;
   background-size: cover;
   color: white;
 
-  @media (min-width: 1025px){
+  @media (min-width: 1025px) {
     display: flex;
   }
 
-  .footer-nav{
-    @media (min-width: 1025px){
+  .footer-nav {
+    @media (min-width: 1025px) {
       display: flex;
       padding: 7rem;
       border-bottom: 1px solid gray;
@@ -652,9 +703,9 @@ $secondary-font_family: "Playfair Display", serif;
   .about-us {
     padding-top: 5rem;
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       padding-top: 2rem;
-      padding-left:  2rem;
+      padding-left: 2rem;
       width: 30%;
     }
   }
@@ -671,7 +722,7 @@ $secondary-font_family: "Playfair Display", serif;
     line-height: 1.5rem;
     padding-bottom: 1rem;
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       width: 80%;
     }
   }
@@ -686,14 +737,14 @@ $secondary-font_family: "Playfair Display", serif;
     background-color: $primary-color;
     border-radius: 50%;
 
-    @media (min-width: 768px) and (max-width: 1024px) {
+    @media (min-width: 768px) {
       width: 5%;
     }
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       width: 10%;
     }
-    
+
   }
 
   .social-media img {
@@ -708,7 +759,7 @@ $secondary-font_family: "Playfair Display", serif;
     padding-bottom: 6rem;
     border-bottom: 1px solid gray;
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       display: flex;
       gap: 4rem;
       border-bottom: unset;
@@ -725,7 +776,7 @@ $secondary-font_family: "Playfair Display", serif;
     padding-bottom: 1rem;
     padding-top: 1rem;
 
-    @media (min-width: 1025px){
+    @media (min-width: 1025px) {
       font-size: 1.2rem;
     }
   }

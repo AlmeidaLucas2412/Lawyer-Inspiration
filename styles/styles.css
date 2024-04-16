@@ -37,6 +37,21 @@
     padding-top: 2.5rem;
   }
 }
+.navbar .svg-menu {
+  height: 100%;
+  padding-top: 3.5rem;
+  padding-left: 12rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar .svg-menu {
+    padding-left: 20rem;
+  }
+}
+@media (min-width: 1025px) {
+  .navbar .svg-menu {
+    display: none;
+  }
+}
 .navbar .menu {
   display: none;
   /*
@@ -44,8 +59,8 @@
   flex-direction: column;
   */
   background-color: #f8f9fa;
-  position: absolute;
-  height: 100vh;
+  position: fixed;
+  height: 100dvh;
   padding: 2rem 1rem;
   margin-left: 60%;
   width: 40%;
@@ -57,14 +72,24 @@
     position: unset;
     background-color: unset;
     padding: 0;
+    padding-top: 1rem;
     height: 100%;
     margin-left: 0;
     width: 70%;
   }
 }
+.navbar .svg-close {
+  display: flex;
+  justify-content: end;
+}
+@media (min-width: 1025px) {
+  .navbar .svg-close {
+    display: none;
+  }
+}
 .navbar .toggle {
   list-style: none;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 @media (min-width: 1025px) {
   .navbar .toggle {
@@ -95,20 +120,31 @@
     color: black;
   }
 }
+@media (min-width: 1025px) {
+  .navbar .sub-menu {
+    position: relative;
+  }
+}
 .navbar .practice {
   display: none;
 }
 @media (min-width: 1025px) {
   .navbar .practice {
-    /*
     display: flex;
     flex-direction: column;
-    background-color: white;
-    padding: 1rem;
     list-style: none;
-    font-family: $primary-font_family;
-    */
+    font-size: 0.8rem;
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    position: absolute;
+    margin-top: 20px;
+    width: 10rem;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    display: none;
   }
+}
+.navbar .practice li {
+  padding: 0.5rem 1.5rem 1rem 1rem;
 }
 
 .introduction {
@@ -203,6 +239,7 @@
   background-color: #fee2b3;
   border: none;
   color: black;
+  cursor: pointer;
 }
 
 .expertise-areas {
@@ -322,7 +359,7 @@
 }
 @media (min-width: 1025px) {
   .solutions .reliable-solutions {
-    padding: 2.5rem;
+    padding: 1.5rem;
   }
 }
 .solutions .solutions-title {
@@ -345,13 +382,18 @@
   padding-top: 1rem;
   line-height: 1.6;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .solutions .solutions-subtitle {
     width: 60%;
   }
 }
 .solutions .button_back {
   padding: 2rem;
+}
+@media (min-width: 1025px) {
+  .solutions .button_back {
+    padding: 1.5rem;
+  }
 }
 .solutions .back-form {
   text-decoration: none;
@@ -369,7 +411,7 @@
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .customers-area {
     padding: 5rem 2rem;
   }
@@ -386,7 +428,7 @@
   text-align: center;
   padding-bottom: 2rem;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .customers-area .customers-cards {
     display: flex;
     flex-wrap: wrap;
@@ -395,7 +437,7 @@
 }
 @media (min-width: 1024px) {
   .customers-area .customers-cards {
-    display: flex;
+    flex-wrap: nowrap;
     gap: 1rem;
     padding: 2rem 8rem;
   }
@@ -425,9 +467,11 @@
   }
 }
 .customers-area .customer-image img {
-  width: 17%;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   padding: 0.5rem;
+  min-width: 50px;
 }
 @media (min-width: 768px) {
   .customers-area .customer-image img {
@@ -441,6 +485,11 @@
 @media (min-width: 768px) and (max-width: 1024px) {
   .customers-area .name-post {
     width: 40%;
+  }
+}
+@media (min-width: 1025px) {
+  .customers-area .name-post {
+    width: 35%;
   }
 }
 .customers-area .customer-name {
@@ -474,6 +523,7 @@
 @media (min-width: 1025px) {
   .legal-solutions {
     display: flex;
+    flex-direction: row;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -485,9 +535,9 @@
 @media (min-width: 1025px) {
   .legal-solutions .legal-content {
     display: flex;
-    position: relative;
     padding: 3rem;
     padding-left: 8rem;
+    width: 70%;
   }
 }
 .legal-solutions .solution-image {
@@ -500,7 +550,7 @@
 }
 @media (min-width: 1025px) {
   .legal-solutions .solution-image {
-    width: 30%;
+    width: 40%;
     padding: 1rem;
   }
 }
@@ -514,8 +564,9 @@
 }
 @media (min-width: 1025px) {
   .legal-solutions .solutions-content {
-    width: 30%;
+    width: 50%;
     padding-left: 1rem;
+    padding-top: 1rem;
   }
 }
 .legal-solutions .solutions-title_legal {
@@ -554,9 +605,8 @@
 }
 @media (min-width: 1025px) {
   .legal-solutions .accordion-container {
-    position: absolute;
-    padding-left: 60rem;
-    padding-top: 3rem;
+    padding: 4rem 1.5rem 2rem 0rem;
+    width: 30%;
   }
 }
 .legal-solutions .accordion-content {
@@ -572,7 +622,7 @@
 }
 .legal-solutions .howto-title {
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-family: "Playfair Display", serif;
 }
 .legal-solutions .howto-description {
@@ -644,7 +694,7 @@
   background-color: #fee2b3;
   border-radius: 50%;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .about .social-media a {
     width: 5%;
   }
